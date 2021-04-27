@@ -9,6 +9,7 @@ public class NutritionFacts {
     private final int sodium;
     private final int carbohydrate;
 
+    //Static member class of the class it builds.
     public static class Builder {
         // Required parameters
         private final int servingSize;

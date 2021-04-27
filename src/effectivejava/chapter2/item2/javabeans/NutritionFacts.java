@@ -26,5 +26,6 @@ public class NutritionFacts {
         cocaCola.setCalories(100);
         cocaCola.setSodium(35);
         cocaCola.setCarbohydrate(27);
+        cocaCola.setFat(100);
     }
 }

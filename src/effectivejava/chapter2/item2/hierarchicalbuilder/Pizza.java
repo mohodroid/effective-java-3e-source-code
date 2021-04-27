@@ -16,9 +16,11 @@ public abstract class Pizza {
             return self();
         }
 
+        //covariant return type -> subclasses declared to return subtype of return type
         abstract Pizza build();
 
-        // Subclasses must override this method to return "this"
+        // Subclasses must override this method to return "this".
+        // Allow methods chaining in subclasses, without the need for cast
         protected abstract T self();
     }
     

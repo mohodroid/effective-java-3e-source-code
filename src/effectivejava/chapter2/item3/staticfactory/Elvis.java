@@ -34,14 +34,14 @@ public class Elvis implements Serializable {
         System.out.println(desElvis);
         System.out.println(desElvis.age);
 
-        Supplier<Elvis> supplier = Elvis::getInstance;
+        Supplier<Object> supplier = Elvis::getInstance;
         System.out.println(supplier.get());
     }
-
 
 }
 
 class Utils {
+
     static Elvis serialize(Elvis elvis) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream("/Users/mohsenmirtalebi/IdeaProjects/effective-java-3e-source-code/src/effectivejava/chapter2/item3/Elvis");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -52,7 +52,6 @@ class Utils {
     }
 
     static Elvis deserialize() throws IOException, ClassNotFoundException {
-
         FileInputStream file = new FileInputStream("/Users/mohsenmirtalebi/IdeaProjects/effective-java-3e-source-code/src/effectivejava/chapter2/item3/Elvis");
         ObjectInputStream in = new ObjectInputStream(file);
         Elvis elvis  = (Elvis) in.readObject();
@@ -60,4 +59,5 @@ class Utils {
         file.close();
         return elvis;
     }
+
 }

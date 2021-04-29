@@ -1,4 +1,4 @@
-package effectivejava.chapter2.item2.hierarchicalbuilder;
+package effectivejava.chapter2.item2.hierarchicalbuilder.pizza;
 
 import java.util.Objects;
 
